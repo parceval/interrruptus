@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATF1508AS-7JX84
+D CPLD - Complex Programmable Logic Devices 128 MC CPLD 7NS IND TEMP GRN
+K
+F http://ww1.microchip.com/downloads/en/devicedoc/doc0784.pdf
+$ENDCMP
+#
+#End Doc Library
