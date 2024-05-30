@@ -389,117 +389,6 @@
 				)
 			)
 		)
-		(symbol "atmel-atdh1150usb-rescue:+3V3-power"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "power_+3V3"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3V3-power_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3-power_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0) hide
-					(name "+3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "atmel-atdh1150usb-rescue:GND-power"
 			(power)
 			(pin_names
@@ -587,117 +476,6 @@
 				)
 			)
 		)
-		(symbol "atmel-atdh1150usb-rescue:VBUS-power"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "power_VBUS"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "VBUS-power_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VBUS-power_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0) hide
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 	)
 	(wire
 		(pts
@@ -711,13 +489,53 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 139.7) (xy 156.21 139.7)
+			(xy 132.08 27.94) (xy 132.08 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b133d53-4466-453f-a23a-f83c984d3bb0")
+	)
+	(wire
+		(pts
+			(xy 137.16 132.08) (xy 137.16 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0de36a22-1a14-4f43-bdb9-7978c10ffaf1")
+	)
+	(wire
+		(pts
+			(xy 132.08 60.96) (xy 132.08 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12e983b1-dafb-42c2-8512-588732505e95")
+	)
+	(wire
+		(pts
+			(xy 162.56 144.78) (xy 156.21 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "13e74d0c-fb22-4400-99f7-b822e9d4547c")
+	)
+	(wire
+		(pts
+			(xy 137.16 93.98) (xy 137.16 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "158fc9b5-f648-4ed7-83f7-295c00fa7545")
 	)
 	(wire
 		(pts
@@ -731,6 +549,26 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 27.94) (xy 137.16 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b9ea55d-8db3-465e-af26-c84fbc899325")
+	)
+	(wire
+		(pts
+			(xy 119.38 149.86) (xy 124.46 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fb13700-a442-4a2d-9daa-1af25154fd80")
+	)
+	(wire
+		(pts
 			(xy 116.84 73.66) (xy 124.46 73.66)
 		)
 		(stroke
@@ -738,6 +576,16 @@
 			(type default)
 		)
 		(uuid "81bece46-ce4d-4fe9-a0f3-86323f81f1da")
+	)
+	(wire
+		(pts
+			(xy 132.08 132.08) (xy 132.08 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96ec7b4f-66ae-4856-a668-dccc3eeae0ab")
 	)
 	(wire
 		(pts
@@ -751,6 +599,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 111.76) (xy 124.46 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a38aee59-4303-4370-8f4e-cfe602b58fcd")
+	)
+	(wire
+		(pts
 			(xy 152.4 73.66) (xy 144.78 73.66)
 		)
 		(stroke
@@ -758,6 +616,36 @@
 			(type default)
 		)
 		(uuid "a8822daa-f954-4a9d-a4b7-b2c785e579f3")
+	)
+	(wire
+		(pts
+			(xy 118.11 78.74) (xy 124.46 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac13442c-1c51-421b-97fd-65b4f42482eb")
+	)
+	(wire
+		(pts
+			(xy 118.11 45.72) (xy 124.46 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b24b697a-9175-4f8a-84c1-9b77ea8cf8eb")
+	)
+	(wire
+		(pts
+			(xy 78.74 62.23) (xy 87.63 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0509aa3-858c-4c27-8298-f687d794cd5a")
 	)
 	(wire
 		(pts
@@ -771,7 +659,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 139.7) (xy 124.46 139.7)
+			(xy 116.84 144.78) (xy 124.46 144.78)
 		)
 		(stroke
 			(width 0)
@@ -781,7 +669,17 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 139.7) (xy 144.78 139.7)
+			(xy 132.08 93.98) (xy 132.08 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd23f8a5-fdbe-4d5e-b477-d47701373559")
+	)
+	(wire
+		(pts
+			(xy 151.13 144.78) (xy 144.78 144.78)
 		)
 		(stroke
 			(width 0)
@@ -819,6 +717,169 @@
 		)
 		(uuid "f882a512-ebf6-4672-b23e-e4e781c12b94")
 	)
+	(wire
+		(pts
+			(xy 137.16 60.96) (xy 137.16 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9d4e900-9286-4dca-abb9-54935ca82fc6")
+	)
+	(wire
+		(pts
+			(xy 78.74 66.04) (xy 87.63 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff957675-f67a-4399-9a11-5f79aad6fc03")
+	)
+	(label "VCCB"
+		(at 137.16 93.98 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10371d5e-d7a2-4329-8ce4-7372d6a894c1")
+	)
+	(label "VCCB"
+		(at 87.63 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "345f07de-e92f-4931-8f54-7a9fdc094a0a")
+	)
+	(label "VCCA"
+		(at 119.38 149.86 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "56ec1111-cef7-4312-abb8-89e46d4ee580")
+	)
+	(label "VCCB"
+		(at 137.16 27.94 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a62ab2e-4d44-4e0e-9a34-519d62a779a3")
+	)
+	(label "VCCA"
+		(at 132.08 132.08 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "657c74f3-73a1-437d-9e40-19f16f7d5fbb")
+	)
+	(label "VCCA"
+		(at 118.11 78.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "67cf4861-bf10-4bbf-8364-cd26cf4f1e11")
+	)
+	(label "VCCA"
+		(at 118.11 45.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "741e4eb9-f5f6-4635-ac7e-477cf269d207")
+	)
+	(label "VCCB"
+		(at 137.16 132.08 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a3e2d0b0-56a2-444b-9a42-2455267fcf7f")
+	)
+	(label "VCCB"
+		(at 137.16 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b57f3646-b6b3-4bfe-a728-5e56dfa58c54")
+	)
+	(label "VCCA"
+		(at 87.63 62.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3223b90-5d2b-4590-8871-cda1f1494629")
+	)
+	(label "VCCA"
+		(at 132.08 60.96 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "daca8618-5468-45eb-bb28-2faa075c958a")
+	)
+	(label "VCCA"
+		(at 132.08 27.94 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "efecd5bf-7c56-47c2-9f79-3596c9e4873d")
+	)
+	(label "VCCA"
+		(at 132.08 93.98 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8153670-13f4-4458-95e3-8ccaf3b7cfde")
+	)
 	(hierarchical_label "TDI_OUT"
 		(shape output)
 		(at 162.56 73.66 0)
@@ -830,6 +891,18 @@
 			(justify left)
 		)
 		(uuid "0ad9df67-0d06-4288-add5-6e3370966827")
+	)
+	(hierarchical_label "VCCB"
+		(shape input)
+		(at 78.74 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "18e80304-3867-49a0-8c6d-570f23ac5b98")
 	)
 	(hierarchical_label "TCK_IN"
 		(shape input)
@@ -857,7 +930,7 @@
 	)
 	(hierarchical_label "TMS_OUT"
 		(shape output)
-		(at 162.56 139.7 0)
+		(at 162.56 144.78 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -881,7 +954,7 @@
 	)
 	(hierarchical_label "TMS_IN"
 		(shape input)
-		(at 116.84 139.7 180)
+		(at 116.84 144.78 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -890,6 +963,18 @@
 			(justify right)
 		)
 		(uuid "9c9de616-9eb6-46bb-9870-8b939a551c0d")
+	)
+	(hierarchical_label "VCCA"
+		(shape input)
+		(at 78.74 62.23 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be523367-0f13-4311-a669-6062b36c7427")
 	)
 	(hierarchical_label "TDO_IN"
 		(shape input)
@@ -917,7 +1002,7 @@
 	)
 	(symbol
 		(lib_id "Logic_LevelTranslator:SN74LVC1T45DBV")
-		(at 134.62 139.7 0)
+		(at 134.62 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -925,7 +1010,7 @@
 		(dnp no)
 		(uuid "17b811c8-1753-4137-8352-2dd145d922c7")
 		(property "Reference" "U9"
-			(at 143.51 133.35 0)
+			(at 143.51 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -934,7 +1019,7 @@
 			)
 		)
 		(property "Value" "SN74LVC1T45DBV"
-			(at 143.51 146.05 0)
+			(at 143.51 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -943,7 +1028,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 134.62 151.13 0)
+			(at 134.62 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -952,7 +1037,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf"
-			(at 111.76 156.21 0)
+			(at 111.76 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -961,7 +1046,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 134.62 139.7 0)
+			(at 134.62 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1127,136 +1212,6 @@
 		)
 	)
 	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:VBUS-power")
-		(at 137.16 30.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "30642f7b-4aa7-442f-886d-731e5c64e274")
-		(property "Reference" "#PWR055"
-			(at 137.16 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 137.541 26.0858 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "afed532f-4271-430e-b0b7-451cb9c08282")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR055")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:VBUS-power")
-		(at 137.16 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "35ea2638-c87c-4e45-a51c-81f13fc6bf30")
-		(property "Reference" "#PWR057"
-			(at 137.16 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 137.541 92.1258 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "01efbd6f-988f-4dab-9e44-26c42b9d8f51")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR057")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Logic_LevelTranslator:SN74LVC1T45DBV")
 		(at 134.62 40.64 0)
 		(unit 1)
@@ -1405,73 +1360,8 @@
 		)
 	)
 	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:VBUS-power")
-		(at 137.16 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "53eac302-1494-494a-b55e-50ab8142f4bc")
-		(property "Reference" "#PWR056"
-			(at 137.16 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 137.541 59.1058 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e730f7f5-e815-45eb-b081-a1519d067b70")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR056")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
-		(at 153.67 139.7 270)
+		(at 153.67 144.78 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1479,14 +1369,6 @@
 		(dnp no)
 		(uuid "5ba2d97c-45f2-4162-9c27-68af7fc7c336")
 		(property "Reference" "R9"
-			(at 153.67 137.16 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
 			(at 153.67 142.24 90)
 			(effects
 				(font
@@ -1494,8 +1376,16 @@
 				)
 			)
 		)
+		(property "Value" "100R"
+			(at 153.67 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" ""
-			(at 153.67 139.7 0)
+			(at 153.67 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1504,7 +1394,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 153.67 139.7 0)
+			(at 153.67 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1513,7 +1403,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 153.67 139.7 0)
+			(at 153.67 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1531,6 +1421,71 @@
 			(project "interruptus"
 				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "atmel-atdh1150usb-rescue:GND-power")
+		(at 124.46 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "77378bf7-c484-4a55-8c6b-fbeb83f5a6ab")
+		(property "Reference" "#PWR032"
+			(at 124.46 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 124.587 121.2342 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4534ee75-8681-43e6-847b-dc88251bd0af")
+		)
+		(instances
+			(project "interruptus"
+				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -1750,136 +1705,6 @@
 		)
 	)
 	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:+3V3-power")
-		(at 132.08 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bdf0ae4a-f06e-48a9-bb7a-49d66ff6c8e9")
-		(property "Reference" "#PWR050"
-			(at 132.08 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 132.461 125.1458 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d97535a5-85f5-4d06-9836-cc0e54caa73c")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR050")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:VBUS-power")
-		(at 137.16 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c22f9d26-9d8d-4620-8c83-301e6f034502")
-		(property "Reference" "#PWR058"
-			(at 137.16 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 137.541 125.1458 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "77b434d4-5689-4640-b1fc-d0d8872c3f2a")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR058")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Logic_LevelTranslator:SN74LVC1T45DBV")
 		(at 134.62 73.66 0)
 		(unit 1)
@@ -1961,203 +1786,8 @@
 		)
 	)
 	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:+3V3-power")
-		(at 132.08 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dbf79e86-4505-4727-aa8a-cdfd79dbe5b4")
-		(property "Reference" "#PWR048"
-			(at 132.08 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 132.461 59.1058 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fc7865c3-1fa2-4778-a2c5-2857dfa3f5f7")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR048")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:+3V3-power")
-		(at 132.08 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f089b7c4-af47-4ee7-a6da-db856469e622")
-		(property "Reference" "#PWR049"
-			(at 132.08 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 132.461 92.1258 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "902541a1-5646-434e-84dc-4f1460ecd68c")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR049")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "atmel-atdh1150usb-rescue:+3V3-power")
-		(at 132.08 30.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f10c2a5b-762d-47f8-b2e0-a4972a864af4")
-		(property "Reference" "#PWR047"
-			(at 132.08 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 132.461 26.0858 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "00fcab70-f3f1-4aa0-9031-74af6839f19b")
-		)
-		(instances
-			(project "interruptus"
-				(path "/ee2eecdf-4a5c-4392-b1fa-18b59b455a83/f41f9d35-9a9d-4ed6-b44b-43e12ad79e40/306401a2-afa6-43ae-beaf-71eeade27a97"
-					(reference "#PWR047")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "atmel-atdh1150usb-rescue:GND-power")
-		(at 134.62 149.86 0)
+		(at 134.62 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2165,7 +1795,7 @@
 		(dnp no)
 		(uuid "f7fffdfd-6c12-4cbb-ae71-f0f110e5b019")
 		(property "Reference" "#PWR054"
-			(at 134.62 156.21 0)
+			(at 134.62 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2174,7 +1804,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 134.747 154.2542 0)
+			(at 134.747 159.3342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2182,7 +1812,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 134.62 149.86 0)
+			(at 134.62 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2191,7 +1821,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 134.62 149.86 0)
+			(at 134.62 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2200,7 +1830,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 134.62 149.86 0)
+			(at 134.62 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
