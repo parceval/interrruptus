@@ -1,0 +1,9 @@
+*.vcd
+*.vvp
+*.edif
+*.fit
+*.io
+*.jed
+*.pin
+*.svf
+*.tt3
