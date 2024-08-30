@@ -1,3 +1,7 @@
+kicad/interruptus/fp-info-cache
+kicad/interruptus/~interruptus.kicad_pcb.lck
+kicad/interruptus/~interruptus.kicad_sch.lck
+kicad/interruptus/interruptus-backups/
 *.vcd
 *.vvp
 *.edif
