@@ -1,89 +1,110 @@
-module interruptus (rst_n,clk,data_bus,addr_bus,b_irq_n,b_m1_n,nmi_n,read_n,write_n,int_ack_n,int_n,b_nmi_n);
-    `define START_ADDRESS    14'h2000
-    `define TIMER_ADDRESS_LO (`START_ADDRESS + 14'd2)
-    `define TIMER_ADDRESS_HI (`START_ADDRESS + 14'd4)
-    `define TIMER_MAX 32'h100
+module interruptus (
+    input gclk1,
+    input resetn,
+    input [15:0] A,
+    input [7:0] d,
+    input iorqn,
+    input m1n,
+    input intan,
+    input rdn,
+    output reg led_r,
+    output reg led_o,
+    output reg led_g
+    );
 
-    // parameter ADDRESS_BIT_WIDTH = 14;
-    //! Asynchronous active low reset
-    input wire rst_n;
-    //! Clock signal
-    input wire clk;
-    output reg [15:0] data_bus;
-    input wire [13:0] addr_bus;
-    input wire [7:0] b_irq_n;
-    input wire b_m1_n;
-    input wire nmi_n;
+    parameter IO_ADDR = 16'h0018;
 
-    input wire read_n;
-    input wire write_n;
-    input wire int_ack_n;
-    output reg int_n;
-    output wire b_nmi_n;
-    
-    reg [3:0] interrupt_priority; // 0 lowest, 7 highest
+    wire io18 = A[4];
+    wire io_noint = !iorqn && intan;
+    wire oe = io18 && io_noint && !rdn;
+
     reg [31:0] timer;
-    reg timer_interrupt_pending;
 
-  integer I;
-  
-
-  always @(posedge clk)
-    begin
-      data_bus <= 16'bz;
-
-      if (~rst_n)
+    always @(negedge rdn, negedge resetn) begin
+      if (!resetn) begin
+         led <= 1'b0;
+      end else begin
+        if (io18)
         begin
-          timer <= 0;
-          timer_interrupt_pending <=0;
+            led <= 1'b1;
         end
-      else
-        begin
-          timer<= timer + 1;
-        end
-
-      interrupt_priority=0;
-      int_n=1;
-      for (I=0; I< 8 ; I=I+1) 
-        if (~b_irq_n[I])
-          begin
-            interrupt_priority=I;
-            int_n=0;
-          end
-          
-      if (timer_interrupt_pending & int_n) begin
-        int_n <= 0;
-        interrupt_priority <= 0;
-        timer_interrupt_pending <= 0;
-      end 
-
-      if (timer == `TIMER_MAX) begin
-        timer <=0;
-        timer_interrupt_pending <= 1'b1;
       end
-
-      if (~int_ack_n)
-        begin
-          data_bus <= interrupt_priority;
-          int_n <= 1'b1;
-        end
-
-      if (~read_n & (addr_bus[13:0] == `START_ADDRESS))
-        begin
-          data_bus <= interrupt_priority;
-        end
-      else if (~read_n & (addr_bus[13:0] == `TIMER_ADDRESS_LO))
-        begin
-          data_bus <= timer[15:0];
-        end
-      else if (~read_n & (addr_bus[13:0] == `TIMER_ADDRESS_HI))
-        begin
-          data_bus <= timer[31:16];
-        end
-
     end
 
-   assign b_nmi_n = 1'b1;
-  
+    always @(posedge gclk1)
+    begin
+        timer <= timer + 1;
+    end
 
+    assign led_r = A[4];
+    assign led_o = led_r && io_noint;
+    assign led_g = led_o && !rdn && io18;
 endmodule
+
+// Pin assignment
+//PIN: CHIP "interruptus" ASSIGNED TO AN PLCC84
+//PIN: led_r : 45
+//PIN: led_o : 12
+//PIN: led_g : 81
+//PIN: irq0n : 15
+//PIN: irq1n : 16
+//PIN: irq2n : 17
+//PIN: irq3n : 18
+//PIN: irq4n : 20
+//PIN: irq5n : 21
+//PIN: irq6n : 22
+//PIN: irq7n : 24
+//PIN: m1n : 25
+//PIN: wrn : 28
+//PIN: rdn : 29
+//PIN: intan : 30
+//PIN: dreqn : 31
+//PIN: iorqn : 34
+//PIN: ds0n : 46
+//PIN: ds1n : 48
+//PIN: sxtakn : 40
+//PIN: sxtrqn : 41
+//PIN: resoutn : 33
+//PIN: resetn : 35
+//PIN: gclk1 : 83
+//PIN: gclk2 : 2
+
+//PIN: gclrn : 1
+
+//PIN: a_0 : 74
+//PIN: a_1 : 73
+//PIN: a_2 : 70
+//PIN: a_3 : 69
+//PIN: a_4 : 68
+//PIN: a_5 : 67
+//PIN: a_6 : 65
+//PIN: a_7 : 64
+//PIN: a_8 : 63
+//PIN: a_9 : 61
+//PIN: a_10 : 60
+//PIN: a_11 : 58
+//PIN: a_12 : 57
+//PIN: a_13 : 56
+//PIN: a_14 : 55
+//PIN: a_15 : 54
+//PIN: a_16 : 52
+//PIN: a_17 : 51
+//PIN: a_18 : 50
+//PIN: a_19 : 49
+
+//PIN: d_0 : 75
+//PIN: d_1 : 76
+//PIN: d_2 : 77
+//PIN: d_3 : 79
+//PIN: d_4 : 80
+//PIN: d_5 : 4
+//PIN: d_6 : 5
+//PIN: d_7 : 6
+//PIN: d_8 : 8
+//PIN: d_9 : 9
+//PIN: d_10 : 10
+//PIN: d_11 : 11
+//PIN: d_12 : 44
+//PIN: d_13 : 36
+//PIN: d_14 : 37
+//PIN: d_15 : 39
