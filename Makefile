@@ -12,6 +12,17 @@ interruptus.edif: interruptus.v
 flash: interruptus.svf
 	openocd
 
+interruptus_tb.vvp: interruptus_tb.v interruptus.v
+	iverilog -o interruptus_tb.vvp interruptus_tb.v
+
+
+interruptus_tb.vcd: interruptus_tb.vvp 
+	./interruptus_tb.vvp
+
+
+test: interruptus_tb.vcd	
+	gtkwave interruptus_tb.vcd
+
 .PHONY: clean
 clean:
 	rm -fr interruptus.jed interruptus.edif interruptus.svf

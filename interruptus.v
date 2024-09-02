@@ -1,34 +1,45 @@
+`define IO_ADDR0  19'h0018
+`define IO_ADDR1  19'h0019
+`define IO_ADDR2  19'h001A
+`define IO_ADDR3  19'h001B
+`define IO_ADDR_CONTROL  19'h001C 
+
 module interruptus (
-    input gclk1,
-    input resetn,
-    input [15:0] A,
-    input [7:0] d,
-    input iorqn,
-    input m1n,
-    input intan,
-    input rdn,
-    output reg led_r,
-    output reg led_o,
-    output reg led_g
+    input wire gclk1,
+    input wire resetn,
+    input wire [19:0] A,
+    inout wire [7:0] d,
+    input wire iorqn,
+    input wire m1n,
+    input wire intan,
+    input wire rdn,
+    input wire wrn,
+    output wire led_r,
+    output wire led_o,
+    output wire led_g
     );
 
-    parameter IO_ADDR = 16'h0018;
-
-    wire io18 = A[4];
-    wire io_noint = !iorqn && intan;
-    wire oe = io18 && io_noint && !rdn;
+    wire io_noint;
+    wire oe;
 
     reg [31:0] timer;
+    reg [23:0] shadow;
+    reg [7:0] control;
 
-    always @(negedge rdn, negedge resetn) begin
-      if (!resetn) begin
-         led <= 1'b0;
-      end else begin
-        if (io18)
-        begin
-            led <= 1'b1;
-        end
-      end
+    always @(posedge !wrn)
+    begin
+      case(A)
+      `IO_ADDR_CONTROL:
+        control <= d;
+    endcase
+    end
+
+    always @*
+    begin
+      case(A)
+      `IO_ADDR0:
+        shadow <= timer[23:0];
+      endcase
     end
 
     always @(posedge gclk1)
@@ -36,13 +47,22 @@ module interruptus (
         timer <= timer + 1;
     end
 
-    assign led_r = A[4];
-    assign led_o = led_r && io_noint;
-    assign led_g = led_o && !rdn && io18;
+    assign io_noint = iorqn && intan;
+    assign oe = io_noint && !rdn;
+
+    assign d = oe && (A==`IO_ADDR0)? timer[31:24] : 8'hz;
+    assign d = oe && (A==`IO_ADDR1)? shadow[23:16] : 8'hz;
+    assign d = oe && (A==`IO_ADDR2)? shadow[15:8] : 8'hz;
+    assign d = oe && (A==`IO_ADDR3)? shadow[7:0] : 8'hz;
+    assign led_g = 1'b1;
+    assign led_r = 1'b1;
+    assign led_o = 1'b1;
+
+
 endmodule
 
 // Pin assignment
-//PIN: CHIP "interruptus" ASSIGNED TO AN PLCC84
+//PIN: CHIP "interruptus" ASSIGNED TO PLCC84
 //PIN: led_r : 45
 //PIN: led_o : 12
 //PIN: led_g : 81
